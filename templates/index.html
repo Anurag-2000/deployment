@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Campany Profit Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="rdspend" placeholder="R&D Spend" required="required" />
+      <input type="text" name="administration" placeholder="Administration" required="required" />
+		  <input type="text" name="marketing_Spend" placeholder="Marketing Spend" required="required" />
+      <select name="state_type" id="state" required="required">
+          <option value="state_Florida">Florida</option>
+          <option value="state_New_York">New York</option>
+          <option value="state_Calafornia">Calafornia</option>
+      </select>
+      <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
