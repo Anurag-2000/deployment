@@ -10,5 +10,3 @@ typing-extensions==3.10.0.0
 Werkzeug==2.0.1
 wincertstore==0.2
 zipp==3.5.0
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
